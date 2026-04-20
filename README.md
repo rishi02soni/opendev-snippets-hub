@@ -22,6 +22,7 @@ https://opendev-snippets-hub.vercel.app
 ## 📸 Preview
 
 <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/8e124462-2cdc-45c0-93d6-544bda181a49" />
+<img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/957e4b25-2e72-40a2-a307-83270d2a4924" />
 
 
 ---
