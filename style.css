@@ -9,3 +9,14 @@ body {
   padding: 10px;
   margin: 10px 0;
 }
+h3 {
+  margin-bottom: 5px;
+}
+
+pre {
+  background: #222;
+  color: #0f0;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
