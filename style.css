@@ -80,7 +80,7 @@ pre {
 }
 
 /* Leaderboard */
-#leaderboard {
+/* #leaderboard {
   list-style: none;
 }
 
@@ -95,8 +95,21 @@ pre {
 #leaderboard li:first-child {
   border: 1px solid gold;
   box-shadow: 0 0 10px gold;
+} */
+/* Light Mode Leaderboard */
+body.light #leaderboard li {
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
 }
 
+body.light #leaderboard li:first-child {
+  border: 1px solid gold;
+  box-shadow: 0 0 10px gold;
+}
+body.light #leaderboard li:hover {
+  background: #f1f5f9;
+}
 /* Light mode */
 body.light {
   background: #f5f5f5;
