@@ -100,17 +100,3 @@ pre {
 function toggleTheme() {
   document.body.classList.toggle("light");
 }
-body.light {
-  background: #f5f5f5;
-  color: #111;
-}
-
-body.light .snippet {
-  background: white;
-  color: black;
-}
-
-body.light pre {
-  background: #eee;
-  color: black;
-}
