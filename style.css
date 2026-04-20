@@ -17,14 +17,30 @@ body {
 h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #38bdf8;
+}
+
+/* Toggle Button */
+button {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 8px 15px;
+  border: none;
+  background: #0ea5e9;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #38bdf8;
 }
 
 /* Section titles */
 h2 {
-  margin-top: 40px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   color: #facc15;
 }
 
@@ -36,34 +52,36 @@ h2 {
   margin-bottom: 20px;
   border-radius: 12px;
   transition: 0.3s;
+  animation: fadeIn 0.5s ease-in;
 }
 
-/* Hover effect */
 .snippet:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px #0ea5e9;
+  box-shadow: 0 0 15px #0ea5e9;
 }
 
-/* Snippet title */
 .snippet h3 {
-  margin-bottom: 10px;
   color: #22c55e;
+  margin-bottom: 10px;
 }
 
-/* Code block */
+/* Code */
 pre {
-  background: #000;
+  background: black;
   color: #00ff9c;
-  padding: 12px;
+  padding: 10px;
   border-radius: 8px;
   overflow-x: auto;
-  font-size: 0.9rem;
+}
+
+/* Copy button inside card */
+.snippet button {
+  margin-top: 10px;
 }
 
 /* Leaderboard */
 #leaderboard {
   list-style: none;
-  padding: 0;
 }
 
 #leaderboard li {
@@ -72,31 +90,36 @@ pre {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
-  transition: 0.2s;
 }
 
-/* Hover leaderboard */
-#leaderboard li:hover {
-  background: #0f172a;
-  transform: scale(1.02);
-}
-
-/* Glow effect for top user */
 #leaderboard li:first-child {
   border: 1px solid gold;
   box-shadow: 0 0 10px gold;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  height: 6px;
+/* Light mode */
+body.light {
+  background: #f5f5f5;
+  color: #111;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #0ea5e9;
-  border-radius: 10px;
+body.light .snippet {
+  background: white;
 }
 
-function toggleTheme() {
-  document.body.classList.toggle("light");
+body.light pre {
+  background: #eee;
+  color: black;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
