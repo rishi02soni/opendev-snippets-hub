@@ -7,7 +7,7 @@ fetch('/data/snippets.json')
         <div class="snippet">
           <h3>${snippet.title}</h3>
           <pre id="code-${index}">${snippet.code}</pre>
-          <button onclick="copyCode(${index})">📋 Copy</button>
+          <button onclick="copyCode(${index})"> Copy</button>
         </div>
       `;
     });
@@ -17,7 +17,7 @@ fetch('/data/snippets.json')
 function copyCode(id) {
   let text = document.getElementById(`code-${id}`).innerText;
   navigator.clipboard.writeText(text);
-  alert("Copied 🚀");
+  alert("Copied ");
 }
 
 // Theme toggle
