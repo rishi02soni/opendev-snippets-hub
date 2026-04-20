@@ -1,9 +1,25 @@
-document.getElementById('snippets').innerHTML = `
-  <div class="snippet">
-    <pre>console.log("Hello Open Source");</pre>
-  </div>
-`;
+fetch('/data/snippets.json')
+  .then(res => res.json())
+  .then(snippets => {
+    snippets.forEach(snippet => {
+      document.getElementById('snippets').innerHTML += `
+        <div class="snippet">
+          <h3>${snippet.title}</h3>
+          <pre>${snippet.code}</pre>
+        </div>
+      `;
+    });
+  });
 
-document.getElementById('leaderboard').innerHTML = `
-  <li>Rishi - 1 contribution</li>
-`;
+// leaderboard
+fetch('/data/contributors.json')
+  .then(res => res.json())
+  .then(data => {
+    let sorted = data.sort((a, b) => b.contributions - a.contributions);
+
+    sorted.forEach(user => {
+      document.getElementById('leaderboard').innerHTML += `
+        <li>${user.name} - ${user.contributions}</li>
+      `;
+    });
+  });
