@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Debounce Function",
+    "code": "function debounce(fn, delay){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args),delay);} }"
+  },
+  {
+    "title": "Hello World",
+    "code": "console.log('Hello Open Source 🚀');"
+  }
+]
